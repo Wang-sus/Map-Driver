@@ -28,6 +28,7 @@ var renderer = null;
 var carModel = null;
 let carPos = [15.3771059, 50.6752981, 12.5];
 let carRot = [0,0,0];
+let carScale = [1, 1, 1];
       
 (function startDemo() {
     // create map in the html div with id 'map-div'
@@ -79,7 +80,7 @@ function onDrawModels(renderChannel) {
             navCoords: carPos,
             heightMode: 'float',
             rotation: carRot,
-            scale: [1, 1, 1],
+            scale: carScale,
             ambientLight: [90,90,90]
         });
     }    
