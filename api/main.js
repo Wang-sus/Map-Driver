@@ -46,7 +46,6 @@ function onMapLoaded() {
     //load models
     //ModelOBJ is the separate modelObj.js library
     carModel = new ModelOBJ(map, renderer, { path:'https://raw.githubusercontent.com/Melown/vts-browser-js/master/demos/meshes-obj-import/models/car-alpine/alpine.obj' }); 
-    cowModel = new ModelOBJ(map, renderer, { path:'https://raw.githubusercontent.com/alecjacobson/common-3d-test-models/master/data/cow.obj' });
 }
 
 
@@ -65,16 +64,7 @@ function onDrawModels(renderChannel) {
         });
     }    
 } 
-    if (cowModel && cowModel.ready) { 
-        cowModel.draw({
-            navCoords: [15.3771059, 50.6752981, 12.5],
-            heightMode: 'float',
-            rotation: [0, 0, 0],
-            scale: [1, 1, 1],
-            ambientLight: [90,90,90]
-        });
-    }    
-} 
+
 
 document.onkeydown = checkKey;
 
