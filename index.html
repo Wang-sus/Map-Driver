@@ -26,6 +26,7 @@ var browser = null;
 var map = null;
 var renderer = null;
 var carModel = null;
+var carPos = '[15.3771059, 50.6752981, 12.5]';
 
 (function startDemo() {
     // create map in the html div with id 'map-div'
@@ -74,7 +75,7 @@ function onDrawModels(renderChannel) {
 
     if (carModel && carModel.ready) { 
         carModel.draw({
-            navCoords: [15.3771059, 50.6752981, 12.5],
+            navCoords: carPos,
             heightMode: 'float',
             rotation: [0,0,0],
             scale: [1, 1, 1],
