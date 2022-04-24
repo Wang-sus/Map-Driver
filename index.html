@@ -85,11 +85,37 @@ function onDrawModels(renderChannel) {
         });
     }    
 } 
-      function keyPressed(event) {
+  function keyPressed(event) {
     if (event.keyCode == 87) {
         carPos[0] += 0.1;
         carPos[1] += 0.1;
         carPos[2] += 0.1;
+    }
+}
+//S key pressed event
+function keyPressed(event) {
+    if (event.keyCode == 83) {
+        carPos[0] -= 0.1;
+        carPos[1] -= 0.1;
+        carPos[2] -= 0.1;
+    }
+}
+
+//A key pressed event
+function keyPressed(event) {
+    if (event.keyCode == 65) {
+        carRot[0] += 0.1;
+        carRot[1] += 0.1;
+        carRot[2] += 0.1;
+    }
+}
+
+//D key pressed event
+function keyPressed(event) {
+    if (event.keyCode == 68) {
+        carRot[0] -= 0.1;
+        carRot[1] -= 0.1;
+        carRot[2] -= 0.1;
     }
 }
 
